@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GokadaAuthBorderLessButton" parent="WayaBorderLessButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="GokadaAuthButton" parent="WayaMaterialButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="backgroundTint">@color/orange_color</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

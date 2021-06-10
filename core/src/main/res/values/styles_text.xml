@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WayaAppText.Header" parent="WayaAppText">
+        <item name="android:textSize">@dimen/waya_large_text_size</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="WayaAppText.SuperHeader" parent="WayaAppText">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/waya_super_large_text_size</item>
+    </style>
+
+    <style name="WayaAppText.Small" parent="WayaAppText">
+        <item name="android:textSize">@dimen/waya_small_text_size</item>
+    </style>
+
+    <style name="WayaAppText.Medium" parent="WayaAppText">
+        <item name="android:textSize">@dimen/waya_medium_text_size</item>
+    </style>
+
+    <style name="WayaAppText.GrayedOut" parent="WayaAppText">
+        <item name="android:textSize">@dimen/waya_text_size</item>
+        <item name="android:textColor">@color/faint_text_color</item>
+    </style>
+
+    <style name="EditTextLayoutTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <style name="EditTextNoStylesTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+</resources>

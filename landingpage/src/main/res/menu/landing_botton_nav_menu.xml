@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/page_discover"
+        android:enabled="true"
+        android:icon="@drawable/ic_explore"
+        android:title="@string/discover"/>
+    <item
+        android:id="@+id/page_wallet"
+        android:enabled="true"
+        android:icon="@drawable/ic_wallet"
+        android:title="@string/wallet"/>
+    <item
+        android:id="@+id/page_notifications"
+        android:enabled="true"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/alerts"/>
+    <item
+        android:id="@+id/page_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"/>
+</menu>

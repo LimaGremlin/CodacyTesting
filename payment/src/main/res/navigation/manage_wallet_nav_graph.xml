@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/manage_wallet_nav_graph"
+    app:startDestination="@id/mangeWalletFragment">
+
+    <fragment
+        android:id="@+id/mangeWalletFragment"
+        android:name="com.wayapaychat.ng.payment.managewallet.MangeWalletHomeFragment"
+        android:label="MangeWalletFragment" >
+        <action
+            android:id="@+id/action_mangeWalletFragment_to_createWalletSuccessFragment"
+            app:destination="@id/createWalletSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mangeWalletFragment_to_walletDetailsFragment"
+            app:destination="@id/walletDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/createWalletSuccessFragment"
+        android:name="com.wayapaychat.ng.payment.managewallet.CreateWalletSuccessFragment"
+        android:label="CreateWalletSuccessFragment" />
+    <fragment
+        android:id="@+id/walletDetailsFragment"
+        android:name="com.wayapaychat.ng.payment.managewallet.WalletDetailsFragment"
+        android:label="WalletDetailsFragment" >
+        <action
+            android:id="@+id/action_walletDetailsFragment_to_generateQrFragment"
+            app:destination="@id/generateQrFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardFragment3"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.AddCardFragment"
+        android:label="AddCardFragment" />
+    <fragment
+        android:id="@+id/generateQrFragment"
+        android:name="com.wayapaychat.ng.payment.managewallet.GenerateQrFragment"
+        android:label="GenerateQrFragment" />
+</navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                              
+                            
+
+                 
+                             
+                                                        
+                 
+                                 
+                             
+
+                                          
+
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_65"
+        android:background="@drawable/bg_white_solid"
+        android:elevation="@dimen/dimen_1"
+        android:id="@+id/container" android:tag="layout/reuseable_biller_option_item_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:tag="binding_1"      
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_14"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/lato_regular"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dimen_10"
+            android:layout_height="24dp"
+                                                 />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

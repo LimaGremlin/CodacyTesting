@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wayapay.ng.landingpage">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application>
+        <activity android:name=".EditGramProfileActivity"></activity>
+        <activity android:name=".PayActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".EventsActivity" />
+        <activity android:name=".GramProfileActivity" />
+        <activity android:name=".NewDonationActivity" />
+        <activity android:name=".GroupAndPagesActivity" />
+        <activity android:name=".PageActivity" />
+        <activity
+            android:name=".NewGroupActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".NewPageActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".NewPostActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".RxCropActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".NewEventActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".SocialActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="${landing_home}" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

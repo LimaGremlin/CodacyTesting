@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="header_text_color">#1C1C1C</color>
+    <color name="payment_header_color">#F1F7FA</color>
+    <color name="default_card_background">#0D0D0D</color>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.wayapaychat.ng.auth.presentation.AuthenticationActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.fragments.VerifyOtpFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="@dimen/dimen_160"
+            android:layout_height="@dimen/dimen_160"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topGuide"
+            app:srcCompat="@drawable/ic_lockillustration" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verify_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:fontFamily="@font/libre_baskerville"
+            android:text="@string/verify_your_account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/profile_pic"
+            app:layout_constraintRight_toRightOf="@+id/profile_pic"
+            app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/explanation"
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/an_otp_has_been_sent"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@+id/verify_title"
+            app:layout_constraintRight_toRightOf="@+id/verify_title"
+            app:layout_constraintTop_toBottomOf="@+id/verify_title" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/pin_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:clickable="false"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:OtpItemCount="6"
+            app:OtpItemWidth="@dimen/dimen_50"
+            app:OtpLineColor="@color/grey"
+            app:OtpViewType="rectangle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/explanation" />
+
+        <Button
+            android:id="@+id/sign_in_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/verify"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin_input" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/did_not_get_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:clickable="true"
+            android:focusable="true"
+            android:letterSpacing="0.1"
+            android:text="@string/did_not_get_otp"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            app:fontFamily="@font/lato_bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

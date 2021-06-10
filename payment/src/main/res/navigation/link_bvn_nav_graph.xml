@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/link_bvn_nav_graph"
+    app:startDestination="@id/linkBVNHomeFragment">
+
+    <fragment
+        android:id="@+id/linkBVNHomeFragment"
+        android:name="com.wayapaychat.ng.payment.linkbvn.LinkBVNHomeFragment"
+        android:label="LinkBVNHomeFragment" >
+        <action
+            android:id="@+id/action_linkBVNHomeFragment_to_BVNVerificationFragment"
+            app:destination="@id/BVNVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BVNVerificationFragment"
+        android:name="com.wayapaychat.ng.payment.linkbvn.BVNVerificationFragment"
+        android:label="BVNVerificationFragment" >
+        <action
+            android:id="@+id/action_BVNVerificationFragment_to_BVNLinkedSuccessFragment"
+            app:destination="@id/BVNLinkedSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BVNLinkedSuccessFragment"
+        android:name="com.wayapaychat.ng.payment.linkbvn.BVNLinkedSuccessFragment"
+        android:label="BVNLinkedSuccessFragment" />
+</navigation>

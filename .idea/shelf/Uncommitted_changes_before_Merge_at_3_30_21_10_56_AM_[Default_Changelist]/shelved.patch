@@ -1,0 +1,14 @@
+Index: auth/src/main/java/com/wayapaychat/ng/auth/presentation/activities/LandingActivityViewModel.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- auth/src/main/java/com/wayapaychat/ng/auth/presentation/activities/LandingActivityViewModel.kt	(date 1617073359000)
++++ auth/src/main/java/com/wayapaychat/ng/auth/presentation/activities/LandingActivityViewModel.kt	(date 1617073359000)
+@@ -0,0 +1,6 @@
++package com.wayapaychat.ng.auth.presentation.activities
++
++import com.wayapaychat.core.base.BaseViewModel
++
++class LandingActivityViewModel : BaseViewModel() {
++}

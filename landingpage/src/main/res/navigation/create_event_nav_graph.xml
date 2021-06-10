@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_nav_graph"
+    app:startDestination="@id/eventInfoFragment">
+
+    <fragment
+        android:id="@+id/eventInfoFragment"
+        android:name="com.wayapay.ng.landingpage.events.EventInfoFragment"
+        android:label="EventInfoFragment" >
+        <action
+            android:id="@+id/action_eventInfoFragment_to_eventLocationFragment"
+            app:destination="@id/eventLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventLocationFragment"
+        android:name="com.wayapay.ng.landingpage.events.EventLocationFragment"
+        android:label="fragment_event_location"
+        tools:layout="@layout/fragment_event_location" >
+        <action
+            android:id="@+id/action_eventLocationFragment_to_eventDayTimeFragment"
+            app:destination="@id/eventDayTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDayTimeFragment"
+        android:name="com.wayapay.ng.landingpage.events.EventDayTimeFragment"
+        android:label="fragment_event_day_time"
+        tools:layout="@layout/fragment_event_day_time" >
+        <action
+            android:id="@+id/action_eventDayTimeFragment_to_eventTicketFragment"
+            app:destination="@id/eventTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventTicketFragment"
+        android:name="com.wayapay.ng.landingpage.events.EventTicketFragment"
+        android:label="fragment_event_ticket"
+        tools:layout="@layout/fragment_event_ticket" >
+        <action
+            android:id="@+id/action_eventTicketFragment_to_publishEventFragment"
+            app:destination="@id/publishEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/publishEventFragment"
+        android:name="com.wayapay.ng.landingpage.events.PublishEventFragment"
+        android:label="fragment_publish_event"
+        tools:layout="@layout/fragment_publish_event" />
+</navigation>

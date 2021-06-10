@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboard_nav_graph"
+    app:startDestination="@id/onBoardingPagesFragment">
+
+    <fragment
+        android:id="@+id/onBoardingPagesFragment"
+        android:name="com.wayapaychat.ng.onboarding.fragments.OnBoardingPagesFragment"
+        android:label="OnBoardingPagesFragment"
+        tools:layout="@layout/fragment_on_boarding_pages">
+        <action
+            android:id="@+id/action_onBoardingPagesFragment_to_onBoardingLandingFragment"
+            app:destination="@id/onBoardingLandingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingLandingFragment"
+        android:name="com.wayapaychat.ng.onboarding.fragments.OnBoardingLandingFragment"
+        android:label="OnBoardingLandingFragment"
+        tools:layout="@layout/fragment_on_boarding_landing" />
+</navigation>

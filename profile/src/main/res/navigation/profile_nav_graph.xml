@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_nav_graph"
+    app:startDestination="@id/profileLandingFragment">
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile">
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="wayapay://profile/editprofile" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_chooseLandingFragment"
+            app:destination="@id/chooseLandingFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_customizeLandingPages2"
+            app:destination="@id/customizeLandingPages" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileLandingFragment"
+            app:destination="@id/profileLandingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileLandingFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.ProfileLandingFragment"
+        android:label="ProfileLandingFragment"
+        tools:layout="@layout/fragment_profile_landing">
+        <action
+            android:id="@+id/action_profileLandingFragment_to_editUserPassFragment"
+            app:destination="@id/editUserPassFragment" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_loginInformationFragment"
+            app:destination="@id/loginInformationFragment" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_editPasswordFragment"
+            app:destination="@id/editPasswordFragment" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_chatSettingsFragment"
+            app:destination="@id/chatSettingsFragment" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_paymentSettings"
+            app:destination="@id/paymentSettings" />
+        <action
+            android:id="@+id/action_profileLandingFragment_to_sendOtpForChangePasswordFragment"
+            app:destination="@id/sendOtpForChangePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserPassFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.EditUserPassFragment"
+        android:label="fragment_edit_user_pass"
+        tools:layout="@layout/fragment_edit_user_pass">
+        <action
+            android:id="@+id/action_editUserPassFragment_to_profileLandingFragment"
+            app:destination="@id/profileLandingFragment"
+            app:popUpTo="@id/editUserPassFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginInformationFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.LoginInformationFragment"
+        android:label="LoginInformationFragment"
+        tools:layout="@layout/fragment_login_information" />
+    <fragment
+        android:id="@+id/chooseLandingFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.ChooseLandingFragment"
+        android:label="ChooseLandingFragment"
+        tools:layout="@layout/fragment_choose_landing">
+        <action
+            android:id="@+id/action_chooseLandingFragment_to_recommendedFragment"
+            app:destination="@id/recommendedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendedFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.RecommendedFragment"
+        android:label="RecommendedFragment"
+        tools:layout="@layout/fragment_recommended">
+        <argument
+            android:name="interest"
+            android:defaultValue="connect"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/customizeLandingPages"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.CustomizeLandingPages"
+        android:label="CustomizeLandingPages"
+        tools:layout="@layout/fragment_customize_landing_page">
+        <action
+            android:id="@+id/action_customizeLandingPages_to_recommendedFragment"
+            app:destination="@id/recommendedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPasswordFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.EditPasswordFragment"
+        android:label="EditPasswordFragment"
+        tools:layout="@layout/fragment_edit_password">
+        <action
+            android:id="@+id/action_editPasswordFragment_to_profileLandingFragment"
+            app:destination="@id/profileLandingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatSettingsFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.ChatSettingsFragment"
+        android:label="ChatSettingsFragment"
+        tools:layout="@layout/chat_settings_fragment" />
+    <fragment
+        android:id="@+id/paymentSettings"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.PaymentSettings"
+        android:label="PaymentSettings"
+        tools:layout="@layout/payment_settings_fragment" />
+    <fragment
+        android:id="@+id/sendOtpForChangePasswordFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.SendOtpForChangePasswordFragment"
+        android:label="SendOtpForChangePasswordFragment" >
+        <action
+            android:id="@+id/action_sendOtpForChangePasswordFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.wayapaychat.ng.profile.presentation.fragments.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" >
+        <action
+            android:id="@+id/action_changePasswordFragment_to_profileLandingFragment"
+            app:destination="@id/profileLandingFragment"
+            app:popUpTo="@+id/profileLandingFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

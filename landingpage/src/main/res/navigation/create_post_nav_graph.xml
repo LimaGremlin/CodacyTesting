@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/create_post_nav_graph"
+    app:startDestination="@id/postHomeFragment">
+
+    <fragment
+        android:id="@+id/postHomeFragment"
+        android:name="com.wayapay.ng.landingpage.post.PostHomeFragment"
+        android:label="PostHomeFragment" />
+    <fragment
+        android:id="@+id/votePostFragment"
+        android:name="com.wayapay.ng.landingpage.post.VotePostFragment"
+        android:label="VotePostFragment" />
+    <fragment
+        android:id="@+id/productPostFragment"
+        android:name="com.wayapay.ng.landingpage.post.ProductPostFragment"
+        android:label="ProductPostFragment" />
+</navigation>

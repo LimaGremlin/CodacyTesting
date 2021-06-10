@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/create_new_wallet"
+        android:title="@string/create_new_wallet"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/payment_settings"
+        android:title="@string/payment_settings"
+        android:visible="true"/>
+    <item
+        android:id="@+id/manage_wallets"
+        android:title="@string/manage_wallets"
+        android:visible="true"/>
+    <item
+        android:id="@+id/manage_card"
+        android:title="@string/manage_cards"
+        android:visible="true"/>
+    <item
+        android:id="@+id/manage_bank_account"
+        android:title="@string/manage_banks"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/all_wallet"
+        android:title="@string/all_wallet"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/link_card"
+        android:title="@string/link_card_bank"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/view_link_card"
+        android:title="@string/view_link_cards"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/link_bank"
+        android:title="@string/link_bank"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/view_link_bank"
+        android:title="@string/view_link_banks"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/link_bvn"
+        android:title="@string/link_bvn"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/disable_wallet"
+        android:title="@string/disable_wallet"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/cancel"
+        android:title="@string/cancel"
+        android:visible="false"/>
+
+    
+</menu>

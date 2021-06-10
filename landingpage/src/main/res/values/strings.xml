@@ -1,0 +1,277 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="landing_package_name">com.wayapay.ng.landingpage</string>
+
+    <!--Formatted Text section -->
+    <string name="get_date_at_time_format">%1$s at %2$s</string>
+    <string name="organized_by_format">Organized by %1$s</string>
+    <string name="interested_format">%1$s interested</string>
+    <string name="going_format">%1$s going</string>
+    <string name="register_count_format">Registered: %1$s</string>
+    <string name="donation_count_format">%1$s Donations</string>
+
+
+    <string name="chat">Chat</string>
+    <string name="alert">Alert</string>
+    <string name="alerts">Alerts</string>
+    <string name="acct_">Acct:</string>
+    <string name="invite_code_">Invite Code:</string>
+    <string name="create">Create</string>
+    <string name="share_a_post_or_write_what_is_on_your_mind">Share a post or write what is on your mind</string>
+    <string name="share_a_photo_or_write_something">Share a photo or write something</string>
+    <string name="pages">Pages</string>
+    <string name="create_a_page_for_your_business_of_fans">Create a page for your business of fans</string>
+    <string name="event">Event</string>
+    <string name="bring_people_together_with_public_or_private_events">Bring people together with public or private events</string>
+    <string name="group">Group</string>
+    <string name="create_a_private_or_public_group_of_interest">Create a private or public group of interest</string>
+    <string name="auction">Auction</string>
+    <string name="auction_items_privately_or_publicly">Auction items privately or publicly</string>
+    <string name="continue_">Continue</string>
+    <string name="event_information">Event Information</string>
+    <string name="what_is_the_name_of_your_event">What is the name of your event?</string>
+    <string name="title_of_event">Title of Event</string>
+    <string name="name_your_event_along_with_why_attendees_should_come_including">Name your event, along with why attendees should come, including</string>
+    <string name="organizer_s_name">Organizer\'s name</string>
+    <string name="tags">Tags</string>
+    <string name="use_tags_to_improve_your_discovery">Use tags to improve your discovery</string>
+    <string name="public_">Public</string>
+    <string name="private_">Private</string>
+    <string name="is_the_event_private_or_public">Is the event private or public?</string>
+    <string name="where_is_the_event_location">Where is the event location</string>
+    <string name="search_location">Search location</string>
+    <string name="physical">Physical</string>
+    <string name="virtual">Virtual</string>
+    <string name="where_is_the_location_of_your_event">Where is the location of your event \n</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="tell_the_your_attendees_when_they_event_will_start_and_end_so_they_plan_for_it">Tell the your attendees when they event will start and end so they plan for it</string>
+    <string name="select_a_feature_date">Select a future date</string>
+    <string name="event_starts">Event starts</string>
+    <string name="start_time">Start time</string>
+    <string name="event_ends">Event ends</string>
+    <string name="end_time">End time</string>
+    <string name="time_format_text">0:00pm</string>
+    <string name="date_format_hint">DD/MM/YYYY</string>
+    <string name="ticketing_fee">Ticketing fee</string>
+    <string name="tell_your_attendees_if_this_is_a_paid_or_free_event_and_how_the_price_works">Tell your attendees if this is a paid or free event, and how the price works</string>
+    <string name="free_to_attend">Free to attend</string>
+    <string name="free_to_attend_or_paid_event">Free to attend or paid event</string>
+    <string name="paid_event">Paid event</string>
+    <string name="url_link_to_event">Url link to event</string>
+    <string name="event_location">Event location</string>
+    <string name="please_input_the_link_to_the_event">Please input the link to the event</string>
+    <string name="publish">Publish</string>
+    <string name="registered_">Registered: </string>
+    <string name="at">at</string>
+    <string name="fee_">Fee:</string>
+    <string name="wayagram">Wayagram</string>
+    <string name="interested">Interested</string>
+    <string name="organized_by">Organized by</string>
+    <string name="moments">Moments</string>
+    <string name="events">Events</string>
+    <string name="make_reservations">Make reservations</string>
+    <string name="edit_event_info">Edit event info</string>
+    <string name="share">Share</string>
+    <string name="report_event">Report event</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="create_new_post">Create new post</string>
+    <string name="ask_a_question">Ask a question</string>
+    <string name="pool_length">Pool Length</string>
+    <string name="days">Days</string>
+    <string name="mins">Mins</string>
+    <string name="hours">Hours</string>
+    <string name="paid_vote">Paid vote</string>
+    <string name="by_sending_you_agree_with_our_terms_and_conditions_of_poll_creation">By sending, you agree with our <a href="https://www.wayapaychat.com/terms-of-use">terms and conditions</a> of poll creation</string>
+    <string name="by_sending_you_agree_with_our_terms_and_conditions_of_product_post">By sending, you agree with our <a href="https://www.wayapaychat.com/terms-of-use">terms and conditions</a> of product post</string>
+    <string name="choice_2">Choice 2</string>
+    <string name="choice_1">Choice 1</string>
+    <string name="enter_a_choice">Enter a choice</string>
+    <string name="set_two_options">Set 2 options</string>
+    <string name="product_post">Product Post</string>
+    <string name="poll_post">Poll Post</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="okay">Okay</string>
+    <string name="payment_info">Payment Info</string>
+    <string name="payment_info_description">All paid votes will be credited into your Rubies Bank (default wallet) at the end of the post duration. A commission of total payment will be paid to Waya</string>
+    <string name="attach_price_to_product">Attach price to product</string>
+    <string name="add_product_image">Add product image</string>
+    <string name="buy">Buy</string>
+    <string name="product_payment_info">Any product paid for will be credited into your Rubies Bank account (default wallet)</string>
+    <string name="create_a_page">Create a page</string>
+    <string name="page_name">Page name</string>
+    <string name="use_the_name_of_your_business_brand_or_organization">Use the name of your business brand or organization</string>
+    <string name="e_g_ecommerce_finance_healthcare">e.g Ecommerce, finance, healthcare</string>
+    <string name="write_about_what_you_do_and_why_do_you_standout">Write about what you do and why do you standout</string>
+    <string name="character_limit_255">Character limit: 255</string>
+    <string name="images">Images</string>
+    <string name="profile_photo_optional">Profile photo (optional)</string>
+    <string name="use_a_logo_or_image_that_helps_people_identity_this_page_in_search_result">Use a logo or image that helps people identity this page in search result</string>
+    <string name="use_a_logo_or_image_that_helps_people_identity_this_group_in_search_result">Use a logo or image that helps people identity this group in search result</string>
+    <string name="cover_photo_optional">Cover photo (optional)</string>
+    <string name="use_an_image_to_represent_what_the_page_is_about">Use an image to represent what the page is about</string>
+    <string name="use_an_image_to_represent_what_the_group_is_about">Use an image to represent what the group is about</string>
+    <string name="a_url_that_links_to_your_website_if_you_have_any">A url that links to your website if you have any</string>
+    <string name="website_url">Website url</string>
+    <string name="www_mywebsite_com">www.mywebsite.com</string>
+    <string name="is_your_group_private">Is your group private?</string>
+    <string name="select_page_category">Select page category</string>
+    <string name="follow">Follow</string>
+    <string name="show_more">Show more</string>
+    <string name="your_post_has_been_created">Your post has been created</string>
+    <string name="your_page_has_been_created">Your page has been created</string>
+    <string name="your_event_has_been_created">Your event has been created</string>
+    <string name="group_name">Group name</string>
+    <string name="what_is_the_name_of_your_group">What is the name of your group</string>
+    <string name="make_group_private">Make group private</string>
+    <string name="write_a_short_description_of_the_group">Write a short description of the group</string>
+    <string name="search">Search</string>
+    <string name="join">Join</string>
+    <string name="some_topics_to_follow">Some Topics to follow</string>
+    <string name="groups_to_join">Groups to join</string>
+    <string name="people_to_follow">People to follow</string>
+    <string name="pages_to_join">Pages to join</string>
+    <string name="mute">Mute</string>
+    <string name="invite">Invite</string>
+    <string name="report">Report</string>
+    <string name="exit">Exit</string>
+    <string name="pages_to_follow">Pages to follow</string>
+    <string name="groups_and_pages"><![CDATA[Groups & Pages]]></string>
+    <string name="groups">Groups</string>
+    <string name="my_groups">My Groups</string>
+    <string name="groups_i_m_in">Groups I\'m in</string>
+    <string name="my_pages">My Pages</string>
+    <string name="pages_i_follow">Pages I follow</string>
+    <string name="un_follow">Un follow</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="under_construction">Under Construction</string>
+    <string name="wayachat">Wayachat</string>
+    <string name="interesting_posts">Interesting posts</string>
+    <string name="votes_per_user">Votes per user</string>
+    <string name="donation_information">Donation Information</string>
+    <string name="give_your_cause_a_title_and_description_so_users_can_relate">Give your cause a title and description so users can relate</string>
+    <string name="title_of_cause">Title of cause</string>
+    <string name="what_is_the_name_of_your_cause">What is the name of your cause?</string>
+    <string name="who_is_organizing_this_donation">Who is organizing this donation?</string>
+    <string name="how_much_are_you_trying_to_raise">How much are you trying to raise</string>
+    <string name="let_users_know_if_donation_is_private_or_public_and_how_much_you_are_trying_to_raise">Let users know if donation is private or public, and how much you are trying to raise</string>
+    <string name="is_donation_public_or_private">Is donation public or private?</string>
+    <string name="display_contribution">Display contribution</string>
+    <string name="hide_contribution">Hide contribution</string>
+    <string name="chose_either_to_display_or_hide_donation_to_user">Chose either to display or hide donation to user</string>
+    <string name="target">Target</string>
+    <string name="i_have_read_and_accepted_the_terms_and_condition_for_donation_post">I have read and accepted the <a href="https://www.wayapaychat.com/terms-of-use">terms and conditions</a> for donation post</string>
+    <string name="donation">Donation</string>
+    <string name="give_users_more_detail_on_the_purpose_of_the_donation">Give users more detail on the purpose of the donation</string>
+    <string name="total_donation_is_public">Total donation is public</string>
+    <string name="total_donation_is_private">Total donation is private</string>
+    <string name="short_description">Short description</string>
+    <string name="your_donation_has_been_created_successfully">Your donation has been created successfully</string>
+    <string name="create_a_donation_post_for_a_cause">Create a donation post for a cause</string>
+    <string name="page">Page</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="timeline">Timeline</string>
+    <string name="edit">Edit</string>
+    <string name="event_updated_successfully">Event updated successfully</string>
+    <string name="users">Users</string>
+    <string name="your_vote_has_been_recorded">Your vote has been recorded</string>
+    <string name="to">To</string>
+    <string name="amount">Amount</string>
+    <string name="your_wallet">Your wallet</string>
+    <string name="selected_wallet">Selected Wallet</string>
+    <string name="please_input_your_4_digit_pin_to_complete_transaction">Please input your 4 digit pin to complete transaction</string>
+    <string name="make_your_account_private">Make your account private</string>
+    <string name="note_if_you_make_your_account_private_only_your_followers_will_be_able_to_view_your_tweets_and_profile">Note! If you make your account private, only your followers will be able to view your tweets and profile</string>
+    <string name="your_user_name_must_be_unique">Your user name must be unique</string>
+</resources>

@@ -1,0 +1,111 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.wayapaychat.ng.auth.presentation.AuthenticationActivityViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context="presentation.fragments.PinFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="@dimen/dimen_100"
+                android:layout_height="@dimen/dimen_100"
+                android:layout_marginTop="@dimen/dimen_120"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_person" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:fontFamily="@font/lato_bold"
+                android:text="Welcome back"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="@+id/profile_pic"
+                app:layout_constraintRight_toRightOf="@+id/profile_pic"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/enter_your_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/enter_your_secure_pin"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@+id/welcome"
+                app:layout_constraintRight_toRightOf="@+id/welcome"
+                app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+            <com.mukesh.OtpView
+                android:id="@+id/pin_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:clickable="false"
+                android:focusableInTouchMode="true"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:OtpItemCount="4"
+                app:OtpItemWidth="@dimen/dimen_50"
+                app:OtpLineColor="@color/grey"
+                app:OtpViewType="rectangle"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enter_your_pin" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_in_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginStart="@dimen/dimen_40"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginEnd="@dimen/dimen_40"
+                android:fontFamily="@font/lato_bold"
+                android:text="@string/sign_in"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:cornerRadius="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pin_input" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/forgot_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/lato_regular"
+                android:padding="8dp"
+                android:text="@string/forgot_pin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_btn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

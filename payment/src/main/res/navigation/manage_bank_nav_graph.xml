@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/manage_bank_nav_graph"
+    app:startDestination="@id/manageBankHomeFragment">
+    <fragment
+        android:id="@+id/manageBankHomeFragment"
+        android:name="com.wayapaychat.ng.payment.managebank.ManageBankHomeFragment"
+        android:label="ManageBankHomeFragment" >
+        <action
+            android:id="@+id/action_manageBankHomeFragment_to_addBankAccountFragment"
+            app:destination="@id/addBankAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_manageBankHomeFragment_to_bankDetailsFragment"
+            app:destination="@id/bankDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBankAccountFragment"
+        android:name="com.wayapaychat.ng.payment.managebank.AddBankAccountFragment"
+        android:label="AddBankAccountFragment" >
+        <action
+            android:id="@+id/action_addBankAccountFragment_to_bankSuccessFragment"
+            app:destination="@id/bankSuccessFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/manageBankHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankDetailsFragment"
+        android:name="com.wayapaychat.ng.payment.managebank.BankDetailsFragment"
+        android:label="BankDetailsFragment" />
+    <fragment
+        android:id="@+id/bankSuccessFragment"
+        android:name="com.wayapaychat.ng.payment.managebank.BankSuccessFragment"
+        android:label="BankSuccessFragment" />
+</navigation>

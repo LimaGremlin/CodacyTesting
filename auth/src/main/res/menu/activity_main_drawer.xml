@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/my_account" />
+
+        <item
+            android:id="@+id/menu_bookmark_post"
+            android:icon="@drawable/ic_group_add"
+            android:title="@string/bookmarked_post" />
+        <item
+            android:id="@+id/discover_people"
+            android:icon="@drawable/ic_group_add"
+            android:title="@string/discover_people" />
+
+        <item
+            android:id="@+id/create_group_and_page"
+            android:icon="@drawable/ic_account_group"
+            android:title="@string/create_group_and_page" />
+        <item
+            android:id="@+id/qr_code"
+            android:icon="@drawable/ic_qrcode_scan"
+            android:title="@string/qr_code" />
+        <item
+            android:id="@+id/interests"
+            android:icon="@drawable/ic_clover"
+            android:title="@string/interests" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/faq"
+            android:title="@string/faq" />
+        <item
+            android:id="@+id/privacy_policy"
+            android:title="@string/privacy_policy" />
+
+        <item
+            android:id="@+id/terms_and_condition"
+            android:title="@string/terms_and_conditions" />
+    </group>
+
+
+</menu>

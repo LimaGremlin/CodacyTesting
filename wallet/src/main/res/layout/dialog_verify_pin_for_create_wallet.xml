@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/WayaAppText.SuperHeader"
+            android:text="@string/input_your_4_digit_pin"
+            android:layout_gravity="center"
+            android:textColor="@color/textColorTwo"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/WayaAppText"
+            android:textSize="@dimen/text_16"
+            android:text="@string/input_pin_to_create_wallet"
+            android:textColor="@color/ash_text"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:gravity="center"/>
+
+        <com.mukesh.OtpView
+            android:id="@+id/pin_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_30"
+            android:clickable="false"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:OtpItemCount="4"
+            app:OtpItemWidth="@dimen/dimen_50"
+            app:OtpLineColor="@color/grey"
+            app:OtpViewType="rectangle"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_button_MB"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            style="@style/WayaMaterialButton.Filled"
+            android:text="@string/create_wallet"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="80dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

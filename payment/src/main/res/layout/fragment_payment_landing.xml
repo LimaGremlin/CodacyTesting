@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <ImageButton
+                    android:id="@+id/nav_button"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_account_circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@{@string/waya_pay_text}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/header_text_color"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/vert_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/waya_small_margin"
+                    android:rotation="90"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_more_horizontal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/history_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/waya_small_margin"
+                    android:padding="@dimen/waya_small_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/vert_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_notification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/greyBg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".fragments.PaymentLandingFragment">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/top_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/dimen_50"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/balance_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_20"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/setup_account"
+                        android:textColor="@color/textBlue"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/default_wallet_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_20"
+                        android:text="@string/default_wallet_text"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/balance_title"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/balance_title" />
+
+                    <LinearLayout
+                        android:id="@+id/setup_account_container"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_100"
+                        android:layout_marginStart="@dimen/dimen_15"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/link_bvn_container"
+                            android:layout_width="@dimen/dimen_80"
+                            android:layout_height="@dimen/dimen_60"
+                            android:layout_marginStart="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/bg_white_solid"
+                            android:elevation="@dimen/dimen_5"
+                            android:orientation="vertical"
+                            android:padding="@dimen/waya_small_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                android:backgroundTint="@color/black"
+                                app:srcCompat="@drawable/ic_baseline_view_array_24" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/link_bvn"
+                                android:layout_width="@dimen/dimen_100"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato_regular"
+                                android:gravity="start"
+                                android:text="@string/link_bvn"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/link_card_container"
+                            android:layout_width="@dimen/dimen_80"
+                            android:layout_height="@dimen/dimen_60"
+                            android:layout_marginStart="@dimen/dimen_20"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/bg_white_solid"
+                            android:elevation="@dimen/dimen_5"
+                            android:orientation="vertical"
+                            android:padding="@dimen/waya_small_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                app:srcCompat="@drawable/ic_u_credit_card" />
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/link_card"
+                                android:layout_width="@dimen/dimen_100"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato_regular"
+                                android:gravity="start"
+                                android:text="@string/link_card_bank"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/link_bank_container"
+                            android:layout_width="@dimen/dimen_80"
+                            android:layout_height="@dimen/dimen_60"
+                            android:layout_marginStart="@dimen/dimen_20"
+                            android:layout_marginEnd="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="@drawable/bg_white_solid"
+                            android:elevation="@dimen/dimen_5"
+                            android:orientation="vertical"
+                            android:padding="@dimen/waya_small_margin">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                app:srcCompat="@drawable/ic_u_bank" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/link_bank"
+                                android:layout_width="@dimen/dimen_100"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_7"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/lato_regular"
+                                android:gravity="start"
+                                android:text="@string/link_bank"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_14" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cards_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/dimen_20"
+                        app:layout_constraintTop_toBottomOf="@+id/setup_account_container">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/item_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:background="@color/greyBg"
+                            android:paddingLeft="@dimen/dimen_5"
+                            android:paddingRight="@dimen/dimen_5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:tabBackground="@drawable/tab_item_blue"
+                            app:tabGravity="center"
+                            app:tabIndicator="@null"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMaxWidth="40dp"
+                            app:tabPaddingEnd="6dp"
+                            app:tabPaddingStart="6dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/wallet_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:cardElevation="0dp"
+                    app:layout_constraintTop_toBottomOf="@+id/top_part">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dimen_10"
+                        android:weightSum="4">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/transfer"
+                            android:layout_width="@dimen/dimen_100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/transfer_icon_new"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="@string/transfer"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_14" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/withdraw"
+                            android:layout_width="@dimen/dimen_100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/withdraw_icon_new"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="@string/withdraw_funds"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_14" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/receive"
+                            android:layout_width="@dimen/dimen_100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/recieve_money_icon"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="@string/receive_funds"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_14" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/payment_request"
+                            android:layout_width="@dimen/dimen_100"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/request_new_icon"
+                            android:fontFamily="@font/lato_regular"
+                            android:gravity="center"
+                            android:text="@string/payment_request"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_14" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:id="@+id/quickteller_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@color/greyBg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintTop_toBottomOf="@+id/wallet_options">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/utiltiy_bills"
+                            layout="@layout/reuseable_biller_option_item"
+                            android:layout_width="@dimen/dimen_149"
+                            android:layout_height="65dp"
+                            android:layout_margin="@dimen/dimen_1"
+                            android:layout_weight="2"
+                            app:displayText="@{@string/utility_bills}"
+                            app:startImage="@{@drawable/ic_utility_icon}">
+
+                        </include>
+
+                        <include
+                            android:id="@+id/airtime"
+                            layout="@layout/reuseable_biller_option_item"
+                            android:layout_width="@dimen/dimen_149"
+                            android:layout_height="@dimen/dimen_65"
+                            android:layout_margin="@dimen/dimen_1"
+                            android:layout_weight="2"
+                            app:displayText="@{@string/airtime}"
+                            app:startImage="@{@drawable/ic_airtime}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/data"
+                            layout="@layout/reuseable_biller_option_item"
+                            android:layout_width="@dimen/dimen_149"
+                            android:layout_height="@dimen/dimen_65"
+                            android:layout_margin="@dimen/dimen_1"
+                            android:layout_weight="2"
+                            app:displayText="@{@string/data}"
+                            app:startImage="@{@drawable/ic_data_icon}">
+
+                        </include>
+
+                        <include
+                            android:id="@+id/cable"
+                            layout="@layout/reuseable_biller_option_item"
+                            android:layout_width="@dimen/dimen_149"
+                            android:layout_height="@dimen/dimen_65"
+                            android:layout_margin="@dimen/dimen_1"
+                            android:layout_weight="2"
+                            app:displayText="@{@string/cable}"
+                            app:startImage="@{@drawable/ic_cable_icon}">
+
+                        </include>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <include
+                            android:id="@+id/betting"
+                            layout="@layout/reuseable_biller_option_item"
+                            android:layout_width="@dimen/dimen_149"
+                            android:layout_height="@dimen/dimen_65"
+                            android:layout_margin="@dimen/dimen_1"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginRight="@dimen/dimen_15"
+                            android:layout_weight="2"
+                            android:visibility="gone"
+                            app:displayText="@{@string/bet}"
+                            app:startImage="@{@drawable/ic_betting_icon}">
+
+                        </include>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,31 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.wayapaychat.ng.walletTopup"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml
+10
+11    <application>
+11-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:5:5-14:19
+12        <activity android:name="com.wayapaychat.ng.walletTopup.TopupWalletActivity" >
+12-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:6:9-12:20
+12-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:6:19-54
+13            <intent-filter>
+13-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:7:13-11:29
+14                <action android:name="${wallet_topup_home}" />
+14-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:8:17-63
+14-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:8:25-60
+15
+16                <category android:name="android.intent.category.DEFAULT" />
+16-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:10:17-76
+16-->C:\Users\chigo\AndroidStudioProjects\WAYA-PAYCHAT-2.0-ANDROID_FRONTEND\walletTopup\src\main\AndroidManifest.xml:10:27-73
+17            </intent-filter>
+18        </activity>
+19    </application>
+20
+21</manifest>

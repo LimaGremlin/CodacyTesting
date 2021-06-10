@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topup_wallet_nav"
+    app:startDestination="@+id/topupLandingFragment">
+    <fragment
+        android:id="@+id/topupLandingFragment"
+        android:name="com.wayapaychat.ng.walletTopup.ui.TopupLandingFragment"
+        android:label="fragment_topup_landing"
+        tools:layout="@layout/fragment_topup_landing">
+
+
+    </fragment>
+</navigation>

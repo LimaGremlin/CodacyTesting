@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="list"
+            type="java.util.List&lt;String&gt;"/>
+        <variable
+            name="removeVisibility"
+            type="Boolean" />
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/shape_rounded_corners"
+        android:id="@+id/image_count_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_view_three_1"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginEnd="4dp"
+            app:imgUri="@{list[0]}"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/divider13"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_view_three_2"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            app:imgUri="@{list[1]}"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider13"
+            app:layout_constraintTop_toTopOf="@+id/image_view_three_1" />
+
+        <ImageView
+            android:id="@+id/image_view_three_3"
+            android:layout_width="0dp"
+            android:layout_height="78dp"
+            app:imgUri="@{list[2]}"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_three_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider13" />
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="1dp"
+            android:layout_height="110dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/remove_image_button_3"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel_white"
+            android:visibility="@{safeUnbox(removeVisibility) ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image_view_three_3" />
+
+        <ImageButton
+            android:id="@+id/remove_image_button_1"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel_white"
+            android:visibility="@{safeUnbox(removeVisibility) ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_three_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/remove_image_button_2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel_white"
+            android:visibility="@{safeUnbox(removeVisibility) ? View.VISIBLE : View.GONE}"
+            app:layout_constraintEnd_toEndOf="@+id/image_view_three_2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

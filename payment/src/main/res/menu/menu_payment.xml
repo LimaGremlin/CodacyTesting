@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/payment_settings"
+        android:title="@string/payment_settings"/>
+
+    <item
+        android:id="@+id/manage_wallet"
+        android:title="@string/manage_wallets"/>
+
+    <item
+        android:id="@+id/manage_card"
+        android:title="@string/manage_cards"/>
+
+    <item
+        android:id="@+id/manage_bank_account"
+        android:title="@string/manage_bank_account"/>
+
+    <item
+        android:id="@+id/dispute_log"
+        android:title="@string/dispute_log"/>
+
+</menu>

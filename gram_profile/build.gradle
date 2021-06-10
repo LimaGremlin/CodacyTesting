@@ -1,0 +1,136 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    kapt {
+        javacOptions {
+            // Increase the max count of errors from annotation processors.
+            // Default is 100.
+            option("-Xmaxerrs", 2000)
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+def retrofit_version = '2.9.0'
+def version_moshi = "1.8.0"
+def version_retrofit_coroutines_adapter = "0.9.2"
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.appCompat,
+            WayaCoreDependencies.coreKtx,
+            WayaCoreDependencies.constraintLayout,
+            WayaCoreDependencies.lifecycleCompiler,
+            WayaCoreDependencies.liveDataLifeCycle,
+            WayaCoreDependencies.viewModelLifeCycle,
+            WayaCoreDependencies.navigationFragmentKtx,
+            WayaCoreDependencies.navigationUiKtx,
+            WayaCoreDependencies.hilt,
+            WayaCoreDependencies.hiltViewModelLifeCycle,
+            WayaCoreDependencies.viewModelScope,
+            WayaCoreDependencies.lifeCycleScope,
+            WayaCoreDependencies.liveDataScope,
+
+            WayaViewDependencies.materialComponent,
+
+            WayaDependencyInjectionDependencies.dagger,
+            WayaDependencyInjectionDependencies.daggerAndroidSupport,
+
+            WayaUtilityDependencies.timber,
+            WayaUtilityDependencies.pagerIndicator,
+            WayaUtilityDependencies.deviceName,
+            WayaUtilityDependencies.rxPermissions,
+            WayaUtilityDependencies.lottie,
+            WayaUtilityDependencies.ankoVersion,
+
+            WayaViewDependencies.pinView,
+            WayaViewDependencies.fresco,
+            WayaViewDependencies.materialComponent,
+
+            WayaFirebaseDependencies.messaging,
+
+            //Implement Room
+            WayaPersistenceDependencies.room,
+            WayaPersistenceDependencies.roomKtx,
+            WayaPersistenceDependencies.roomRx,
+
+            project (':core'),
+            project (":domain"),
+            project(":navigation"),
+            project(":local"),
+            project(":remote")
+    )
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    //java 8
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+
+    // otp and pin view
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+
+    //Retrofit converters
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    //coroutine adapter for retrofit
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+
+    // Moshi
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    //Add log level to retrofit for debugging purpose
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //crop library
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+
+    //Number progress bar
+    implementation 'org.adw.library:discrete-seekbar:1.0.1'
+
+    debugImplementation(
+            WayaUtilityDependencies.debugDatabaseLibrary
+    )
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerAndroidProcessor,
+            WayaDependencyInjectionDependencies.daggerCompiler,
+            WayaCoreDependencies.hiltCompiler,
+            'androidx.hilt:hilt-compiler:1.0.0-alpha03'
+    )
+}

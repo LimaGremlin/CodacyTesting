@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_flow"
+    app:startDestination="@id/authHomeFragment">
+
+    <fragment
+        android:id="@+id/loginnFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.LoginnFragment"
+        android:label="LoginnFragment"
+        tools:layout="@layout/fragment_loginn">
+        <action
+            android:id="@+id/action_loginnFragment_to_pinFragment"
+            app:destination="@id/pinFragment" />
+        <action
+            android:id="@+id/action_loginnFragment_to_createPinFragment"
+            app:destination="@id/createPinFragment" />
+        <action
+            android:id="@+id/action_loginnFragment_to_resendOtpFragment"
+            app:destination="@id/resendOtpFragment" />
+        <action
+            android:id="@+id/action_loginnFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+        <action
+            android:id="@+id/action_loginnFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginnFragment_to_authResendOTPFragment"
+            app:destination="@id/authResendOTPFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.PinFragment"
+        android:label="PinFragment"
+        tools:layout="@layout/pin_fragment">
+        <action
+            android:id="@+id/action_pinFragment_to_customizeLandingPages"
+            app:destination="@id/customizeLandingPages" />
+        <action
+            android:id="@+id/action_pinFragment_to_resetPinFragment"
+            app:destination="@id/resetPinFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/signup_fragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_passwordSetupFragment"
+            app:destination="@id/passwordSetupFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_merchantSecondSignupFragment"
+            app:destination="@id/merchantSecondSignupFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_resendOtpFragment"
+            app:destination="@id/resendOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordSetupFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.PasswordSetupFragment"
+        android:label="PasswordSetupFragment"
+        tools:layout="@layout/password_setup_fragment">
+        <action
+            android:id="@+id/action_passwordSetupFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:popUpTo="@id/authHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.VerifyOtpFragment"
+        android:label="VerifyOtpFragment"
+        tools:layout="@layout/verify_otp">
+        <argument
+            android:name="headerText"
+            app:argType="string" />
+        <argument
+            android:name="moveToCreatePin"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_accountCreationSuccessFragment"
+            app:destination="@id/accountCreationSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/authHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPinFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.CreatePinFragment"
+        android:label="CreatePinFragment"
+        tools:layout="@layout/create_pin_fragment">
+        <action
+            android:id="@+id/action_createPinFragment_to_pinSetFragment"
+            app:destination="@id/pinSetFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/loginnFragment" />
+        <action
+            android:id="@+id/action_createPinFragment_to_loginnFragment"
+            app:destination="@id/loginnFragment"
+            app:popUpTo="@id/loginnFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/merchantSecondSignupFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.MerchantSecondSignupFragment"
+        android:label="MerchantSecondSignupFragment"
+        tools:layout="@layout/fragment_merchant_second_signup">
+        <action
+            android:id="@+id/action_merchantSecondSignupFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popUpTo="@id/signUpFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_merchantSecondSignupFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:popUpTo="@id/passwordSetupFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendedFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.RecommendedFragment"
+        android:label="RecommendedFragment"
+        tools:layout="@layout/recommend_fragment" />
+    <fragment
+        android:id="@+id/resendOtpFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.ResendOtpFragment"
+        android:label="ResendOtpFragment"
+        tools:layout="@layout/fragment_resend_otp">
+        <action
+            android:id="@+id/action_resendOtpFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customizeLandingPages"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.CustomizeLandingPages"
+        android:label="CustomizeLandingPages"
+        tools:layout="@layout/customize_landing_page_fragment"/>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_oneTimePasswordFragment"
+            app:destination="@id/oneTimePasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/oneTimePasswordFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.OneTimePasswordFragment"
+        android:label="OneTimePasswordFragment"
+        tools:layout="@layout/fragment_one_time_password">
+        <action
+            android:id="@+id/action_oneTimePasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.ResetPasswordFragment"
+        android:label="ResetPasswordFragment"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_successfulFragment"
+            app:destination="@id/successfulFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginnFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfulFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.SuccessfulFragment"
+        android:label="SuccessfulFragment"
+        tools:layout="@layout/fragment_successful"/>
+    <fragment
+        android:id="@+id/profileUpdateFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.ProfileUpdateFragment"
+        android:label="ProfileUpdateFragment"
+        tools:layout="@layout/fragment_profile_update">
+        <action
+            android:id="@+id/action_profileUpdateFragment_to_customizeLandingPages"
+            app:destination="@id/customizeLandingPages"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinSetFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.PinSetFragment"
+        android:label="PinSetFragment"
+        tools:layout="@layout/fragment_pin_set">
+        <action
+            android:id="@+id/action_pinSetFragment_to_customizeLandingPages"
+            app:destination="@id/customizeLandingPages"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pinSetFragment_to_profileUpdateFragment"
+            app:destination="@id/profileUpdateFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/authHomeFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.AuthHomeFragment"
+        android:label="AuthHomeFragment" >
+        <action
+            android:id="@+id/action_authHomeFragment_to_loginnFragment"
+            app:destination="@id/loginnFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_authHomeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountCreationSuccessFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.AccountCreationSuccessFragment"
+        android:label="AccountCreationSuccessFragment" >
+        <action
+            android:id="@+id/action_accountCreationSuccessFragment_to_loginnFragment"
+            app:destination="@id/loginnFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/authHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authResendOTPFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.AuthResendOTPFragment"
+        android:label="AuthResendOTPFragment" >
+        <action
+            android:id="@+id/action_authResendOTPFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPinFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.ResetPinFragment"
+        android:label="ResetPinFragment" >
+        <action
+            android:id="@+id/action_resetPinFragment_to_resetPinOTPFragment"
+            app:destination="@id/resetPinOTPFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPinSuccessFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.ResetPinSuccessFragment"
+        android:label="fragment_reset_pin_success"
+        tools:layout="@layout/fragment_reset_pin_success" />
+    <fragment
+        android:id="@+id/resetPinOTPFragment"
+        android:name="com.wayapaychat.ng.auth.presentation.fragments.forgotPassword.ResetPinOTPFragment"
+        android:label="ResetPinOTPFragment" >
+        <action
+            android:id="@+id/action_resetPinOTPFragment_to_resetPinSuccessFragment"
+            app:destination="@id/resetPinSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginnFragment" />
+    </fragment>
+
+</navigation>

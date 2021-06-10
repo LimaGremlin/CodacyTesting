@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topup_via_card_graph"
+    app:startDestination="@id/topupViaCardFragment">
+
+    <fragment
+        android:id="@+id/topupViaCardFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.bottom_sheet.TopupViaCardFragment"
+        android:label="fragment_topup_via_card"
+        tools:layout="@layout/fragment_topup_via_card" >
+        <action
+            android:id="@+id/action_topupViaCardFragment_to_cardConfirmationFragment"
+            app:destination="@id/cardConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardConfirmationFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.bottom_sheet.CardConfirmationFragment"
+        android:label="CardConfirmationFragment" >
+        <action
+            android:id="@+id/action_cardConfirmationFragment_to_topupSuccessFragment"
+            app:destination="@id/topupSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topupSuccessFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.bottom_sheet.TopupSuccessFragment"
+        android:label="TopupSuccessFragment" />
+</navigation>

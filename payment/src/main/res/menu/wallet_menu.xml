@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_make_default_wallet"
+        android:enabled="true"
+        android:title="@string/set_as_default_wallet"/>
+</menu>

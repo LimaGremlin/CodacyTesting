@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_with_grey_border_no_radius"
+    android:paddingBottom="@dimen/dimen_20">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="@dimen/dimen_40"
+        android:layout_height="@dimen/dimen_40"
+        android:layout_marginStart="@dimen/dimen_30"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/name"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginLeft="@dimen/dimen_10"
+        android:fontFamily="@font/lato"
+        android:text="@string/my_fullname"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_pic"
+        app:layout_constraintLeft_toRightOf="@+id/profile_pic"
+        app:layout_constraintTop_toTopOf="@+id/profile_pic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/account_number"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:fontFamily="@font/lato"
+        android:text="Acct: 010876574"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/profile_pic"
+        app:layout_constraintTop_toBottomOf="@+id/profile_pic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/earn_with_waya"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/earn_with_wayapaychat"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/account_number"
+        app:layout_constraintTop_toBottomOf="@+id/account_number" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/invite"
+        android:layout_width="@dimen/dimen_200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:fontFamily="@font/lato"
+        android:text="Invite Code"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/earn_with_waya"
+        app:layout_constraintTop_toBottomOf="@+id/earn_with_waya" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

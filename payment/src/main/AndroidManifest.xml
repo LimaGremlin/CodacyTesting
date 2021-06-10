@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wayapaychat.ng.payment">
+
+    <application>
+        <activity android:name=".TransferFundsActivity"></activity>
+        <activity android:name=".LinkBVNActivity" />
+        <activity android:name=".ManageCardActivity" />
+        <activity android:name=".ManageBankActivity" />
+        <activity
+            android:name=".ManageWalletActivity"
+            android:theme="@style/WayaAppTheme.NoActionBar" />
+        <activity
+            android:name=".PaymentActivity"
+            android:theme="@style/PaymentAppTheme">
+            <intent-filter>
+                <action android:name="${payment_home}" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".utils.CaptureActivityAnyOrientation"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+
+</manifest>

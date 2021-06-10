@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/set_default_wallet_item"
+        android:title="@string/set_default_wallet"/>
+
+    <item
+        android:id="@+id/disable_wallet_item"
+        android:title="@string/disable_wallet"/>
+
+    <item
+        android:id="@+id/all_wallets_item"
+        android:title="@string/all_wallets" />
+
+</menu>

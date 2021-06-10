@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/new_page_nav_graph"
+    app:startDestination="@id/createPageFragment">
+
+    <fragment
+        android:id="@+id/createPageFragment"
+        android:name="com.wayapay.ng.landingpage.pages.CreatePageFragment"
+        android:label="CreatePageFragment" >
+        <action
+            android:id="@+id/action_createPageFragment_to_createPageImagesFragment"
+            app:destination="@id/createPageImagesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPageImagesFragment"
+        android:name="com.wayapay.ng.landingpage.pages.CreatePageImagesFragment"
+        android:label="CreatePageImagesFragment" />
+</navigation>

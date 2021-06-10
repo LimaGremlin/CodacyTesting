@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6634</color>
+    <color name="colorPrimaryDark">#FF6614</color>
+    <color name="colorPrimaryFade">#30FF5349</color>
+    <color name="colorAccent">#FF6614</color>
+    <color name="colorAccentSecondary">#064A72</color>
+    <color name="colorAccentBackground">#F1F7FA</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <color name="layout_background_color">#E5E5E5</color>
+    <color name="divider_background_color">#F2F2F2</color>
+
+    <color name="waya_green">#00C795</color>
+    <color name="default_text_color">#191919</color>
+    <color name="primary_text_color">#333333</color>
+    <color name="faint_text_color">#AAA8A8</color>
+    <color name="transparent_background">#B3FFFFFF</color>
+    <color name="faint_text_color_2">#FDE7E7E7</color>
+    <color name="deeper_waya_green">#12926A</color>
+    <color name="faint_background_color">#F8F8F8</color>
+    <color name="ash_text">#828282</color>
+
+    <color name="red">#FF0000</color>
+    <color name="warning">#ffc107</color>
+    <color name="yellow">#FCC038</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="home_card_color">#F2F2F2</color>
+
+    <color name="circle_card_color">#F1F7FA</color>
+    <color name="settings_background_color">#F4F4F4</color>
+    <color name="line_color">#B5B5B5</color>
+    <color name="location_background">#EFFAF7</color>
+    <color name="fare_amount_background">#0AA57E</color>
+    <color name="bottom_nav_text_color">#A0A0A0</color>
+    <color name="black">#000000</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="bar_color">#F1F7FA</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="textcolor">#4F4F4F</color>
+    <color name="textColorTwo">#1C1C1C</color>
+    <color name="textBlue">#064A72</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="text99Grey">#999999</color>
+    <color name="greyBg">#F5F5F5</color>
+    <color name="comment_grey_bg">#A9A9A9</color>
+    <!-- Fully transparent, equivalent to 0x00000000 -->
+    <color name="transparent">#00000000</color>
+    <color name="color_pending">#F2C94C</color>
+    <color name="moment_page_color">#064672</color>
+    <color name="ash">#EDEAEA</color>
+</resources>

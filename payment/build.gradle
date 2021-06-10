@@ -1,0 +1,116 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    viewBinding {
+        enabled = true
+    }
+    kapt {
+        javacOptions {
+            // Increase the max count of errors from annotation processors.
+            // Default is 100.
+            option("-Xmaxerrs", 2000)
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+}
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.appCompat,
+            WayaCoreDependencies.coreKtx,
+            WayaCoreDependencies.constraintLayout,
+            WayaCoreDependencies.lifecycleCompiler,
+            WayaCoreDependencies.liveDataLifeCycle,
+            WayaCoreDependencies.viewModelLifeCycle,
+            WayaCoreDependencies.navigationFragmentKtx,
+            WayaCoreDependencies.navigationUiKtx,
+            WayaCoreDependencies.hilt,
+            WayaCoreDependencies.hiltViewModelLifeCycle,
+            WayaCoreDependencies.viewModelScope,
+            WayaCoreDependencies.lifeCycleScope,
+            WayaCoreDependencies.liveDataScope,
+
+            WayaViewDependencies.materialComponent,
+
+            WayaDependencyInjectionDependencies.dagger,
+            WayaDependencyInjectionDependencies.daggerAndroidSupport,
+
+            WayaUtilityDependencies.timber,
+            WayaUtilityDependencies.pagerIndicator,
+            WayaUtilityDependencies.deviceName,
+            WayaUtilityDependencies.rxPermissions,
+            WayaUtilityDependencies.lottie,
+            WayaUtilityDependencies.recyclerAnimator,
+            WayaUtilityDependencies.ankoVersion,
+            WayaUtilityDependencies.zxingCore,
+            WayaUtilityDependencies.zxingAndroid,
+
+            WayaViewDependencies.pinView,
+            WayaViewDependencies.fresco,
+            WayaViewDependencies.materialComponent,
+
+            WayaFirebaseDependencies.messaging,
+
+            //Implement Room
+            WayaPersistenceDependencies.room,
+            WayaPersistenceDependencies.roomKtx,
+            WayaPersistenceDependencies.roomRx,
+
+            project (":core"),
+            project (":domain"),
+            project(":navigation"),
+            project(":local"),
+    )
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //material design
+    implementation 'com.google.android.material:material:1.3.0'
+    //Credit card view
+    implementation 'com.vinaygaba:creditcardview:1.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //Qr Code generator
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+
+    debugImplementation(
+            WayaUtilityDependencies.debugDatabaseLibrary
+    )
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerAndroidProcessor,
+            WayaDependencyInjectionDependencies.daggerCompiler,
+            WayaCoreDependencies.hiltCompiler,
+            'androidx.hilt:hilt-compiler:1.0.0-alpha03'
+    )
+
+}

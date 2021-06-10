@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TopupLandingFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wallet Balance" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Default wallet" />
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_topup"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+       android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:padding="10dp"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vp_topup">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/transfer"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/transfer_icon_new"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/transfer"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/withdraw"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/withdraw_icon_new"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/withdraw_funds"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/receive"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/recieve_money_icon"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/receive_funds"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/payment_request"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/request_new_icon"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/payment_request"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Utility bills"
+                android:elevation="4dp"
+                android:padding="4dp"
+                android:background="@drawable/white_card_bg"
+                android:gravity="center"
+                android:textAlignment="center"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Airtime"
+                android:gravity="center"
+                android:background="@drawable/white_card_bg"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="2"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Data"
+                android:elevation="4dp"
+                android:padding="4dp"
+                android:background="@drawable/white_card_bg"
+                android:gravity="center"
+                android:textAlignment="center"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Cable"
+                android:gravity="center"
+                android:background="@drawable/white_card_bg"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

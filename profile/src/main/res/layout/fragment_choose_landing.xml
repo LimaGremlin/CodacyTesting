@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.fragments.ChooseLandingFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/select_your_interest"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/explanation"
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:text="@string/customize_your_landing_page_by_interest"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            app:layout_constraintRight_toRightOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/discover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/explanation"
+            app:srcCompat="@drawable/discover_card" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/discover"
+            app:srcCompat="@drawable/connect_card" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/transact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/connect"
+            app:srcCompat="@drawable/transact_card" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

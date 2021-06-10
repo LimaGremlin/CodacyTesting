@@ -1,0 +1,146 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        applicationId WayaCoreDependencies.packageName
+
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                auth_home      : NavigationHome.authHome,
+                payment_home   : NavigationHome.paymentHome,
+                settings_home  : NavigationHome.settingsHome,
+                profile_home   : NavigationHome.profileHome,
+                onboarding_home: NavigationHome.onboardingHome,
+                landing_home   : NavigationHome.landingHome,
+                wallet_home    : NavigationHome.walletHome,
+                qr_profile_home    : NavigationHome.qrCodeProfileHome,
+                gram_profile_home    : NavigationHome.gramProfileHome,
+                search_home    : NavigationHome.searchHome,
+        ]
+
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+    kapt {
+        javacOptions {
+            // Increase the max count of errors from annotation processors.
+            // Default is 100.
+            option("-Xmaxerrs", 2000)
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            versionNameSuffix "-debug"
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.appCompat,
+            WayaCoreDependencies.coreKtx,
+            WayaCoreDependencies.viewModelLifeCycle,
+            WayaCoreDependencies.liveDataLifeCycle,
+            WayaCoreDependencies.runtimeKtxLiftCycle,
+            WayaCoreDependencies.constraintLayout,
+            WayaCoreDependencies.navigationFragmentKtx,
+            WayaCoreDependencies.navigationUiKtx,
+            WayaCoreDependencies.multidex,
+            WayaCoreDependencies.hilt,
+            WayaCoreDependencies.guava,
+
+            WayaGooglePlayDependenciesDependencies.googleMaps,
+            WayaGooglePlayDependenciesDependencies.places,
+
+            WayaDependencyInjectionDependencies.dagger,
+            WayaDependencyInjectionDependencies.daggerAndroidSupport,
+
+            WayaViewDependencies.shimmerLayout,
+            WayaViewDependencies.fresco,
+            WayaViewDependencies.materialComponent,
+
+            WayaUtilityDependencies.recyclerAnimator,
+            WayaUtilityDependencies.overscrollDecor,
+            WayaUtilityDependencies.picasso,
+            WayaUtilityDependencies.lottie,
+            WayaUtilityDependencies.timber,
+
+            WayaAnalyticsDependencies.fabric,
+            WayaAnalyticsDependencies.analytics,
+
+            WayaFirebaseDependencies.analytics,
+            WayaFirebaseDependencies.messaging,
+
+            WayaWorkManagerDependencies.workManagerRx,
+
+            project(":core"),
+            project(":domain"),
+            project(":auth"),
+            project(":repository"),
+            project(":local"),
+            project(":preference"),
+            project(":remote"),
+            project(":navigation"),
+            project(":settings"),
+            project(":payment"),
+            project(":onboarding"),
+            project(":profile"),
+            project(":landingpage"),
+            project(":wallet"),
+            project(":qr_code_profile"),
+            project(":search"),
+            project(":gram_profile"),
+    )
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerAndroidProcessor,
+            WayaDependencyInjectionDependencies.daggerCompiler,
+            WayaCoreDependencies.lifecycleCompiler,
+            WayaCoreDependencies.hiltCompiler
+    )
+
+    testImplementation(
+            WayaTestDependencies.junit
+    )
+
+
+    androidTestImplementation(
+            WayaAndroidTestDependencies.espresso,
+            WayaAndroidTestDependencies.testRunner
+    )
+}

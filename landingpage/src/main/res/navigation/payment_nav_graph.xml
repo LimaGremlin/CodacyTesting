@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_nav_graph"
+    app:startDestination="@id/paymentCheckFragment">
+
+    <fragment
+        android:id="@+id/paymentCheckFragment"
+        android:name="com.wayapay.ng.landingpage.payment.PaymentCheckFragment"
+        android:label="fragment_payment_check"
+        tools:layout="@layout/fragment_payment_check" />
+</navigation>

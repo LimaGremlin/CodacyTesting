@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_navigation"
+    app:startDestination="@id/paymentLandingFragment">
+
+    <fragment
+        android:id="@+id/paymentLandingFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.PaymentLandingFragment"
+        android:label="fragment_payment_landing"
+        tools:layout="@layout/fragment_payment_landing">
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_addBankFragment"
+            app:destination="@id/addBankFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_addCardFragment"
+            app:destination="@id/addCardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_QRCodeFragment"
+            app:destination="@id/QRCodeFragment" />
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_manageCardFragment"
+            app:destination="@id/manageCardFragment" />
+
+        <action
+            android:id="@+id/action_paymentFragment_to_listCardsFragment"
+            app:destination="@id/listAllCards" />
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_manageBankAccountFragment"
+            app:destination="@id/manageBankAccountFragment" />
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_addBankAccount2"
+            app:destination="@id/addBankAccount" />
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_linkBVN"
+            app:destination="@id/linkBVN" />
+
+
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBankFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.AddBankFragment"
+        android:label="AddBankFragment">
+        <action
+            android:id="@+id/action_addBankFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.AddCardFragment"
+        android:label="fragment_add_card"
+        tools:layout="@layout/fragment_add_card">
+        <action
+            android:id="@+id/action_addCardFragment_to_verifyBvnFragment"
+            app:destination="@id/verifyBvnFragment" />
+        <action
+            android:id="@+id/action_addCardFragment_to_cardVerifiedFragment"
+            app:destination="@id/cardVerifiedFragment"
+            app:popUpTo="@id/manageCardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
+    <fragment
+        android:id="@+id/QRCodeFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.QRCodeFragment"
+        android:label="QRCodeFragment"
+        tools:layout="@layout/fragment_q_r_code" >
+        <action
+            android:id="@+id/action_QRCodeFragment_to_confirmTransactionFragment"
+            app:destination="@id/confirmTransactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listAllCards"
+        android:name="com.wayapaychat.ng.payment.managecard.ListBankCardsFragment"
+        android:label="ListBankCardsFragment"
+        tools:layout="@layout/fragment_liat_bank_cards"
+        >
+        <action
+            android:id="@+id/action_paymentFragment_to_listCardsFragment"
+            app:destination="@id/listAllCards" />
+        <action
+            android:id="@+id/action_listAllCards_to_chooseWalletFragment"
+            app:destination="@id/chooseWalletFragment" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/manageCardFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.ManageCardFragment"
+        android:label="ManageCardFragment"
+        tools:layout="@layout/manage_card_fragment">
+        <action
+            android:id="@+id/action_manageCardFragment_to_addCardFragment"
+            app:destination="@id/addCardFragment" />
+        <action
+            android:id="@+id/action_manageCardFragment_to_cardDetailsFragment"
+            app:destination="@id/cardDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyBvnFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.VerifyBvnFragment"
+        android:label="VerifyBvnFragment"
+        tools:layout="@layout/verify_bvn_fragment">
+        <action
+            android:id="@+id/action_verifyBvnFragment_to_cardVerifiedFragment"
+            app:destination="@id/cardVerifiedFragment"
+            app:popUpTo="@id/manageCardFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardVerifiedFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.CardVerifiedFragment"
+        android:label="CardVerifiedFragment"
+        tools:layout="@layout/card_verified_fragment" >
+        <argument
+            android:name="centerText"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardDetailsFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managecard.CardDetailsFragment"
+        android:label="CardDetailsFragment"
+        tools:layout="@layout/card_details_fragment" />
+    <fragment
+        android:id="@+id/addBankAccount"
+        android:name="com.wayapaychat.ng.payment.fragments.managebank.AddBankAccount"
+        android:label="AddBankAccount"
+        tools:layout="@layout/add_bank_account_fragment">
+        <action
+            android:id="@+id/action_addBankAccount_to_cardDetailsFragment"
+            app:destination="@id/cardDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageBankAccountFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.managebank.ManageBankAccountFragment"
+        android:label="ManageBankAccountFragment"
+        tools:layout="@layout/manage_bank_account_fragment">
+        <action
+            android:id="@+id/action_manageBankAccountFragment_to_addBankAccount"
+            app:destination="@id/addBankAccount" />
+        <action
+            android:id="@+id/action_manageBankAccountFragment_to_bankAccountFragment"
+            app:destination="@id/bankAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkBVN"
+        android:name="com.wayapaychat.ng.payment.linkbvn.LinkBVNHomeFragment"
+        android:label="link_bvn_fragment"
+        tools:layout="@layout/fragment_link_b_v_n_home" />
+    <fragment
+        android:id="@+id/confirmTransactionFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.completeTransaction.ConfirmTransactionFragment"
+        android:label="fragment_confirm_transaction"
+        tools:layout="@layout/fragment_confirm_transaction" >
+        <action
+            android:id="@+id/action_confirmTransactionFragment_to_transactionSuccessfulFragment"
+            app:destination="@id/transactionSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionSuccessfulFragment"
+        android:name="com.wayapaychat.ng.payment.fragments.completeTransaction.TransactionSuccessfulFragment"
+        android:label="fragment_transaction_successful"
+        tools:layout="@layout/fragment_transaction_successful" >
+        <action
+            android:id="@+id/action_transactionSuccessfulFragment_to_QRCodeFragment"
+            app:destination="@id/QRCodeFragment"
+            app:popUpTo="@id/QRCodeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bankAccountFragment"
+        tools:layout="@layout/fragment_bank_account"
+        android:name="com.wayapaychat.ng.payment.fragments.managebank.BankAccountFragment"
+        android:label="BankAccountFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.wayapaychat.ng.payment.main.PaymentNotificationsFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_payment_notifications" />
+
+    <dialog
+        android:id="@+id/transferFunds"
+        android:name="com.wayapaychat.ng.payment.transferFunds.TransferFundsBottomSheet"
+        android:label="fragment_transfer_Funds"
+        tools:layout="@layout/fragment_transfer_funds">
+
+        <action
+            android:id="@+id/action_paymentLandingFragment_to_transferFundsBottomSheet"
+            app:destination="@id/transferFunds" />
+    </dialog>
+
+
+    <fragment
+        android:id="@+id/chooseWalletFragment"
+        android:name="com.wayapaychat.ng.payment.managecard.ChooseWalletFragment"
+        android:label="fragment_choose_wallet"
+        tools:layout="@layout/fragment_choose_wallet" />
+</navigation>

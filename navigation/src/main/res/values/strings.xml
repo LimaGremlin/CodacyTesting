@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="authHome">com.wayapaychat.auth.home</string>
+    <string name="paymentHome">com.wayapaychat.payment.home</string>
+    <string name="profileHome">com.wayapaychat.profile.home</string>
+    <string name="onBoardingHome">com.wayapaychat.onboarding.home</string>
+    <string name="dummyHome">com.wayapaychat.dummy.home</string>
+    <string name="settingsHome">com.wayapaychat.settings.home</string>
+    <string name="onLandingHome">com.wayapaychat.landing.home</string>
+    <string name="walletHome">com.wayapaychat.wallet.home</string>
+    <string name="paymentNavToExtra">com.wayapaychat.payment.extra.navigateTo</string>
+    <string name="paymentNavToQRCode">com.wayapaychat.payment.navigateToQRCode</string>
+    <string name="qrCodeProfileHome">com.wayapaychat.qr_profile.home</string>
+    <string name="searchHome">com.wayapaychat.search.home</string>
+    <string name="gramProfileHome">com.wayapaychat.gram_profile.home</string>
+</resources>

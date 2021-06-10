@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Wallet</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_balance">Available Balance</string>
+    <string name="argument_wallet">wallet</string>
+    <string name="wallet_history">Wallet History</string>
+    <string name="set_default_wallet">Set as Default wallet</string>
+    <string name="all_wallets">All Wallets</string>
+    <string name="input_pin_to_create_wallet">Please input your 4digit pin to create a new wallet</string>
+    <string name="create_wallet">Create Wallet</string>
+    <string name="wallet_created">New Wallet created successfully</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="already_default_wallet">This Wallet is already set as default</string>
+    <string name="wallet_set_as_default">Wallet set as Default</string>
+</resources>

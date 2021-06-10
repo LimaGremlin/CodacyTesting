@@ -1,0 +1,4 @@
+include ':gram_profile'
+include ':search'
+include ':qr_code_profile'
+include ':app', ':local', ':preference', ':remote', ':repository', ':domain', ':auth', ':core', ':navigation', ':settings', ':payment', ':onboarding', ':profile', ':wallet', ':landingpage'

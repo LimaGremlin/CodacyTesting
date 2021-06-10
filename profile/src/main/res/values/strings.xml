@@ -1,0 +1,21 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_your_password_bottom_text">Change your password</string>
+    <string name="time_log_text">Time Log</string>
+    <string name="dialog_referral_code_title">Here\'s your Referral Code</string>
+    <string name="copy">Copy</string>
+    <string name="share_title">Share</string>
+    <string name="share_referral_code_subject">My Waya Referral Code</string>
+    <string name="label_referral_code_clipboard">Waya Referral Code</string>
+    <string name="toast_referral_code_copied">Referral Code Copied</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="old_password_hint">Old Password</string>
+    <string name="otp_hint">Enter OTP</string>
+    <string name="placeholder_otp_will_be_sent_to_email">An OTP will be sent to %s</string>
+    <string name="change_password">Change Password</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="resending_otp">Resending OTP</string>
+</resources>

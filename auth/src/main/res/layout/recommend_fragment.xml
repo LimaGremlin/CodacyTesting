@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".app.ui.authentication.fragments.RecommendedFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/libre_baskerville"
+            android:text="@string/recommended_for_you"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/explanation"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintRight_toRightOf="@+id/title"
+            app:layout_constraintLeft_toLeftOf="@+id/title"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:fontFamily="@font/lato_regular"
+            android:letterSpacing="0.1"
+            android:text="@string/here_are_some_people_and_business_you_can_follow"
+            android:layout_width="@dimen/dimen_250"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommended"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_20"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginBottom="@dimen/dimen_10"
+            app:layout_constraintBottom_toTopOf="@+id/action_btn"
+            app:layout_constraintTop_toBottomOf="@+id/explanation"/>
+
+        <include
+            android:id="@+id/action_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            layout="@layout/reusable_button"
+            app:buttonText = "@{@string/finish}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="@dimen/dimen_20"
+            android:layout_marginStart="@dimen/dimen_20"
+            android:layout_marginBottom="@dimen/dimen_30" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

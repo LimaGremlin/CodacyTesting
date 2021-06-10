@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/make_reservation_menu"
+        android:enabled="true"
+        android:title="@string/make_reservations"/>
+    <item
+        android:id="@+id/share_menu"
+        android:enabled="true"
+        android:title="@string/share"/>
+    <item
+        android:id="@+id/edit_menu"
+        android:enabled="true"
+        android:title="@string/edit"/>
+    <item
+        android:id="@+id/report_event_menu"
+        android:enabled="true"
+        android:title="@string/report_event"/>
+</menu>

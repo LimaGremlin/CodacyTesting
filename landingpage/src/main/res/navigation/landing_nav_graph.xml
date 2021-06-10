@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landing_nav_graph"
+    app:startDestination="@id/landingHomeFragment">
+    <fragment
+        android:id="@+id/landingHomeFragment"
+        android:name="com.wayapay.ng.landingpage.main.LandingHomeFragment"
+        android:label="fragment_landing_home"
+        tools:layout="@layout/fragment_landing_home" >
+        <action
+            android:id="@+id/action_landingHomeFragment_to_viewEventFragment"
+            app:destination="@id/viewEventFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_landingHomeFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment" />
+        <action
+            android:id="@+id/action_landingHomeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_landingHomeFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+        <action
+            android:id="@+id/action_landingHomeFragment_to_interestFragment"
+            app:destination="@id/interestFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewEventFragment"
+        android:name="com.wayapay.ng.landingpage.main.ViewEventFragment"
+        android:label="ViewEventFragment" />
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.wayapay.ng.landingpage.main.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" >
+        <action
+            android:id="@+id/action_discoverFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:popUpTo="@id/landingHomeFragment" />
+        <action
+            android:id="@+id/action_discoverFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment"
+            app:popUpTo="@id/landingHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.wayapay.ng.landingpage.main.ChatsFragment"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_chatsFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:popUpTo="@id/landingHomeFragment" />
+        <action
+            android:id="@+id/action_chatsFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment"
+            app:popUpTo="@id/landingHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.wayapay.ng.landingpage.main.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_discoverFragment"
+            app:destination="@id/discoverFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/landingHomeFragment" />
+        <action
+            android:id="@+id/action_notificationFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment"
+            app:popUpTo="@id/landingHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestFragment"
+        android:name="com.wayapay.ng.landingpage.main.InterestFragment"
+        android:label="InterestFragment" />
+</navigation>

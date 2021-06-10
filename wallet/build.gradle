@@ -1,0 +1,95 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+        multiDexEnabled true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    viewBinding {
+        enabled = true
+    }
+
+    kapt {
+        javacOptions {
+            // Increase the max count of errors from annotation processors.
+            // Default is 100.
+            option("-Xmaxerrs", 2000)
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+}
+
+dependencies {
+
+    implementation(
+//            fileTree(dir: 'libs', include: ['*.jar']),
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.appCompat,
+            WayaCoreDependencies.coreKtx,
+            WayaCoreDependencies.constraintLayout,
+            WayaCoreDependencies.lifecycleCompiler,
+            WayaCoreDependencies.liveDataLifeCycle,
+            WayaCoreDependencies.viewModelLifeCycle,
+            WayaCoreDependencies.navigationFragmentKtx,
+            WayaCoreDependencies.navigationUiKtx,
+            WayaCoreDependencies.hilt,
+            WayaCoreDependencies.hiltViewModelLifeCycle,
+            WayaCoreDependencies.viewModelScope,
+            WayaCoreDependencies.lifeCycleScope,
+            WayaCoreDependencies.liveDataScope,
+
+            WayaViewDependencies.materialComponent,
+
+            WayaUtilityDependencies.hdodenhofCircleImage,
+
+            WayaDependencyInjectionDependencies.dagger,
+            WayaDependencyInjectionDependencies.daggerAndroidSupport,
+
+            project (':core'),
+            project (":domain"),
+            project(":navigation")
+    )
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    debugImplementation(
+            WayaUtilityDependencies.debugDatabaseLibrary
+    )
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerAndroidProcessor,
+            WayaDependencyInjectionDependencies.daggerCompiler,
+            WayaCoreDependencies.hiltCompiler,
+            'androidx.hilt:hilt-compiler:1.0.0-alpha03'
+    )
+
+    // otp and pin view
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+    //Qr Code generator
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+}

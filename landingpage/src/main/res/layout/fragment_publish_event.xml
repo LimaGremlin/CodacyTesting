@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.wayapay.ng.landingpage.events.EventViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".events.PublishEventFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                app:imgUri="@{viewModel.wayaEvent.eventImageUri}"
+                app:imgUrl="@{viewModel.wayaEvent.eventImageUrl}"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/url_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/faint_background_color"
+                android:drawableEnd="@drawable/ic_copy"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton"
+                app:setEventUrl="@{viewModel.wayaEvent}"
+                tools:text="https://blablabla.com/mettingonsdofsj " />
+
+            <TextView
+                android:id="@+id/event_name_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@{viewModel.wayaEvent.title}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/url_text_view"
+                tools:text="Wayapay Prelunch (Event title)" />
+
+            <TextView
+                android:id="@+id/event_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{viewModel.startTimeString}"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/event_name_text"
+                tools:text="Friday, March 21, 2021 at 12:00pm" />
+
+            <TextView
+                android:id="@+id/organizers_name_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:textColor="@color/primary_text_color"
+                android:drawableStart="@drawable/ic_group_text_color"
+                android:drawablePadding="16dp"
+                android:text="@{viewModel.wayaEvent.organizer}"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/event_date_time"
+                tools:text="@string/organizer_s_name" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:text="@{viewModel.wayaEvent.eventLocation}"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/organizers_name_text"
+                tools:text="@string/event_location" />
+
+            <TextView
+                android:id="@+id/free_to_attend_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_offer"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:text="@{viewModel.freeToAttend}"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/location_text"
+                tools:text="@string/free_to_attend" />
+
+            <TextView
+                android:id="@+id/registered_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:drawableStart="@drawable/ic_registered"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:text="@{viewModel.registeredCount}"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/free_to_attend_text"
+                tools:text="@string/register_cont" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="@+id/imageButton"
+                android:background="@drawable/shape_circle_accent_background"
+                android:src="@drawable/ic_camera" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

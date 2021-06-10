@@ -1,0 +1,75 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+
+        buildConfigField("String", "BASE_URL", WayaCoreDependencies.BASE_URL)
+        buildConfigField("String", "BASE_PROFILE_URL", WayaCoreDependencies.PROFILE_URL)
+        buildConfigField("String", "BASE_PASSWORD_URL", WayaCoreDependencies.PASSWORD_URL)
+        buildConfigField("String", "BASE_QR_CODE_URL", WayaCoreDependencies.QR_CODE_URL)
+        buildConfigField("String", "BASE_WALLET_URL", WayaCoreDependencies.WALLET_URL)
+        buildConfigField("String", "BASE_CARD_URL", WayaCoreDependencies.CARD_URL)
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+def version_retrofit_coroutines_adapter = "0.9.2"
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.coroutines,
+
+            WayaDependencyInjectionDependencies.javax,
+            WayaDependencyInjectionDependencies.javaxAnnotation,
+
+            WayaNetworkDependencies.okhttp,
+            WayaNetworkDependencies.loggingInterceptor,
+            WayaNetworkDependencies.retrofit,
+            WayaNetworkDependencies.gsonConverter,
+            WayaNetworkDependencies.rxJavaAdapter,
+            WayaNetworkDependencies.stetho,
+            WayaNetworkDependencies.stethoOkhttp,
+            WayaNetworkDependencies.moshi,
+
+            WayaUtilityDependencies.timber,
+
+            WayaDependencyInjectionDependencies.dagger,
+
+            project(":repository"),
+    )
+
+    //coroutine adapter for retrofit
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerCompiler
+    )
+}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.wayapaychat.ng.payment.viewModels.BankAccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.managebank.BankAccountFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/custom_flat_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:leftImage="@{@drawable/ic_left_arrow}"
+            app:toolBarTitle="@{@string/card_details}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <include
+            android:id="@+id/bankAccountItem"
+            layout="@layout/bank_account_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:hideSideArrow="@{true}"
+            app:layout_constraintEnd_toEndOf="@id/rightGuide"
+            app:layout_constraintStart_toStartOf="@id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:bankAccount="@{viewModel.bankAccountLiveData}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/issuer_bank_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:text="@string/issuer_bank_text"
+            android:textColor="#BDBDBD"
+            app:layout_constraintEnd_toStartOf="@+id/issuer_bank"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/bankAccountItem" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/issuer_bank"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:text="@{viewModel.bankAccountLiveData.bankName}"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/issuer_bank_text"
+            app:layout_constraintTop_toTopOf="@+id/issuer_bank_text"
+            tools:text="Guarantee Trust Bank" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/expiry_date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:text="@string/account_name"
+            android:textColor="#BDBDBD"
+            app:layout_constraintEnd_toStartOf="@+id/expiry_date"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/issuer_bank" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/expiry_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:text="@{viewModel.bankAccountLiveData.accountName}"
+            app:layout_constraintEnd_toStartOf="@+id/rightGuide"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/expiry_date_text"
+            app:layout_constraintTop_toTopOf="@+id/expiry_date_text"
+            tools:text="Guarantee Trust Bank" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/deleteBankAccountBtn"
+            style="@style/WayaBorderLessButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="@string/delete_bank_account"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuide"
+            app:layout_constraintStart_toStartOf="@+id/leftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/expiry_date_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

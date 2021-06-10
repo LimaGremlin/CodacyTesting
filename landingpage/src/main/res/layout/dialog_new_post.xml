@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:padding="16dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/primary_text_color"
+            android:text="@string/create"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/post_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_post_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/post"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/share_a_post_or_write_what_is_on_your_mind"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moment_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageView_moment"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_moments_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_moment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/moment"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDesMoment"
+                app:layout_constraintStart_toEndOf="@+id/imageView_moment"
+                app:layout_constraintTop_toTopOf="@+id/imageView_moment" />
+
+            <TextView
+                android:id="@+id/textViewDesMoment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/share_a_photo_or_write_something"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_moment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView_moment"
+                app:layout_constraintTop_toBottomOf="@+id/textView_moment" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pages_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageViewPages"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_pages_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/pages"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDesPages"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPages"
+                app:layout_constraintTop_toTopOf="@+id/imageViewPages" />
+
+            <TextView
+                android:id="@+id/textViewDesPages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/create_a_page_for_your_business_of_fans"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewPages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewPages"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPages" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="?android:attr/listDivider"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/group_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageViewGroup"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_group_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/group"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDesGroup"
+                app:layout_constraintStart_toEndOf="@+id/imageViewGroup"
+                app:layout_constraintTop_toTopOf="@+id/imageViewGroup" />
+
+            <TextView
+                android:id="@+id/textViewDesGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/create_a_private_or_public_group_of_interest"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewGroup"
+                app:layout_constraintTop_toBottomOf="@+id/textViewGroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/event_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageViewEvent"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_event_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/event"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDesEvent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewEvent"
+                app:layout_constraintTop_toTopOf="@+id/imageViewEvent" />
+
+            <TextView
+                android:id="@+id/textViewDesEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/bring_people_together_with_public_or_private_events"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewEvent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewEvent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEvent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/auction_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/imageViewAuction"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_circle_accent_background"
+                android:padding="12dp"
+                android:src="@drawable/ic_auction_accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewAuction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/donation"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text_color"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDesAuction"
+                app:layout_constraintStart_toEndOf="@+id/imageViewAuction"
+                app:layout_constraintTop_toTopOf="@+id/imageViewAuction" />
+
+            <TextView
+                android:id="@+id/textViewDesAuction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:maxLines="2"
+                android:text="@string/create_a_donation_post_for_a_cause"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewAuction"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewAuction"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAuction" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

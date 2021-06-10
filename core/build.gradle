@@ -1,0 +1,131 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion DependenciesVersions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion DependenciesVersions.minSdkVersion
+        targetSdkVersion DependenciesVersions.targetSdkVersion
+
+        versionCode DependenciesVersions.versionCode
+        versionName DependenciesVersions.versionName
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+def retrofit_version = '2.9.0'
+def version_moshi = "1.8.0"
+def version_retrofit_coroutines_adapter = "0.9.2"
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+
+            WayaCoreDependencies.appCompat,
+            WayaCoreDependencies.coreKtx,
+            WayaCoreDependencies.navigationFragmentKtx,
+            WayaCoreDependencies.navigationUiKtx,
+            WayaCoreDependencies.hilt,
+            WayaCoreDependencies.hiltViewModelLifeCycle,
+
+            WayaCoreDependencies.constraintLayout,
+            WayaViewDependencies.materialComponent,
+
+            WayaUtilityDependencies.viewPagerTransformer,
+            WayaUtilityDependencies.materialRatingBar,
+            WayaUtilityDependencies.lottie,
+            WayaUtilityDependencies.picasso,
+            WayaUtilityDependencies.hdodenhofCircleImage,
+            WayaUtilityDependencies.glide,
+
+            WayaDependencyInjectionDependencies.dagger,
+            WayaDependencyInjectionDependencies.daggerAndroidSupport,
+
+            WayaAsyncDependencies.rxAndroid,
+
+            WayaAnalyticsDependencies.fabric,
+
+            WayaGooglePlayDependenciesDependencies.googleMaps,
+            WayaGooglePlayDependenciesDependencies.playServicesAuth,
+            WayaGooglePlayDependenciesDependencies.playServicesAuthPhone,
+            /**
+             * Utility dependencies
+             */
+            WayaUtilityDependencies.timber,
+
+            WayaViewDependencies.shimmerLayout,
+
+            project(":local"),
+            project(":repository"),
+            project(":domain"),
+            project(":navigation")
+    )
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Retrofit converters
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    //coroutine adapter for retrofit
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+
+    // Moshi
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    //Add log level to retrofit for debugging purpose
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    debugImplementation(
+            WayaUtilityDependencies.debugDatabaseLibrary
+    )
+
+    api(
+            /**
+             * Remote dependencies
+             */
+            WayaNetworkDependencies.okhttp,
+            WayaNetworkDependencies.loggingInterceptor,
+            WayaNetworkDependencies.retrofit,
+            WayaNetworkDependencies.gsonConverter,
+            WayaNetworkDependencies.rxJavaAdapter,
+            WayaNetworkDependencies.stetho,
+            WayaNetworkDependencies.stethoOkhttp,
+
+            project(":remote")
+    )
+
+    kapt(
+            WayaDependencyInjectionDependencies.daggerAndroidProcessor,
+            WayaDependencyInjectionDependencies.daggerCompiler,
+            WayaCoreDependencies.hiltCompiler,
+            'androidx.hilt:hilt-compiler:1.0.0-alpha03'
+    )
+}

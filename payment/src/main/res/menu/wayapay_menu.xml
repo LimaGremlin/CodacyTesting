@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/payment_menu_id"
+        android:title="@string/payment_settings"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/manage_wallets"
+        android:title="@string/manage_wallets"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/manage_card"
+        android:title="@string/manage_cards"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/manage_bank_account"
+        android:title="@string/manage_bank_account"
+        android:visible="true" />
+</menu>

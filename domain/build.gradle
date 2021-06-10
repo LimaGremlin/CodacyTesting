@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation(
+            fileTree(dir: 'libs', include: ['*.jar']),
+
+            WayaCoreDependencies.kotlin,
+            WayaCoreDependencies.coroutines,
+
+            WayaAsyncDependencies.rxAndroid,
+
+            WayaDependencyInjectionDependencies.javax,
+            WayaDependencyInjectionDependencies.javaxAnnotation,
+
+            WayaAsyncDependencies.rxAndroid,
+    )
+}

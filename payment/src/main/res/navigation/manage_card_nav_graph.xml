@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manage_card_nav_graph"
+    app:startDestination="@id/manageCardHomeFragment">
+
+    <fragment
+        android:id="@+id/listBankCardsFragment"
+        android:name="com.wayapaychat.ng.payment.managecard.ListBankCardsFragment"
+        android:label="ListBankCardsFragment" >
+        <action
+            android:id="@+id/action_listBankCardsFragment_to_newCardFragment"
+            app:destination="@id/newCardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCardFragment"
+        android:name="com.wayapaychat.ng.payment.managecard.NewCardFragment"
+        android:label="fragment_new_card"
+        tools:layout="@layout/fragment_new_card" >
+        <action
+            android:id="@+id/action_newCardFragment_to_addCardSuccessFragment"
+            app:destination="@id/addCardSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageCardHomeFragment"
+        android:name="com.wayapaychat.ng.payment.managecard.ManageCardHomeFragment"
+        android:label="ManageCardHomeFragment" >
+        <action
+            android:id="@+id/action_manageCardHomeFragment_to_listBankCardsFragment"
+            app:destination="@id/listBankCardsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_manageCardHomeFragment_to_chooseWalletFragment2"
+            app:destination="@id/chooseWalletFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseWalletFragment2"
+        android:name="com.wayapaychat.ng.payment.managecard.ChooseWalletFragment"
+        android:label="ChooseWalletFragment" >
+        <action
+            android:id="@+id/action_chooseWalletFragment2_to_newCardFragment"
+            app:destination="@id/newCardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newCard"
+        android:name="com.wayapaychat.ng.payment.managecard.NewCardFragment"
+        android:label="NewCardFragment" />
+    <fragment
+        android:id="@+id/addCardSuccessFragment"
+        android:name="com.wayapaychat.ng.payment.managecard.AddCardSuccessFragment"
+        android:label="AddCardSuccessFragment" />
+
+</navigation>
